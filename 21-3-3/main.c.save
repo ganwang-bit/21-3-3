@@ -1,0 +1,38 @@
+//#include <stdio.h>
+//#include <stdlib.h>
+//
+//int main()
+//{
+//    printf("Hello world!\n");
+//    return 0;
+//}
+#include<stdio.h>
+int m_d[]={31,29,31,30,31,30,31,31,31,30,30,31};
+int m_d1[]={31,29,31,30,31,30,31,31,31,30,30,31};
+int main()
+{
+    int month=1,day=1,month2=10,day2=1,week=6,sum=0,year=2000,year2=2020,flag=0;
+    while(year<year2||(year==year2&&month<month2)||(year==year2&&month==month2&&day<=day2))
+    {
+        flag=year%400||(year%)
+        if(day>m_d[month-1])
+        {
+            day-=m_d[month-1];
+            month++;
+        }
+        if(month>12)
+        {
+            month-=12;
+            year++;
+        }
+        if(week==1)
+            sum+=2;
+        else
+            sum++;
+        week++;
+        week=week==7 ? 7 : week%7;
+        day++;
+    }
+    printf("%d",sum);
+    return 0;
+}
